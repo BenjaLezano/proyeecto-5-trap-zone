@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Movimiento | Trap &amp; Reggaetón</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <!-- Navbar Responsivo de Bootstrap -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-trapzone">
+      <div class="container-fluid">
+        <a class="navbar-brand logotipo" href="index.html">TrapZone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/sobre-mi.html">Artistas</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/proyectos.html">Lanzamientos</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Producción</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <!-- Hero Section -->
+    <section class="seccion-hero">
+      <span class="etiqueta-destaque">Escena Urbana</span>
+      <h1 class="titulo-principal">Lo más escuchado de Argentina y Chile: Cris Mj, Juicy Nise y Fanta Rosario</h1>
+      <p class="texto-destacado">
+        La plataforma dedicada a repasar las barras, los beats y los estrenos más destacados del género urbano y la escena independiente.
+      </p>
+      <a href="pages/proyectos.html" class="boton-primario">Escuchar Lanzamientos</a>
+    </section>
+
+    <!-- Componente Carousel de Bootstrap (Galería) -->
+    <section class="seccion-contenido">
+      <h2 class="subtitulo-seccion">Galería del Movimiento</h2>
+      <div id="carouselTrapZone" class="carousel slide carousel-trapzone shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselTrapZone" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselTrapZone" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselTrapZone" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Concierto de Trap">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Escena en Vivo</h5>
+              <p>Los mejores festivales y tocatas del circuito urbano actual.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Estudio de Grabación">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Producción Profesional</h5>
+              <p>Sesiones de grabación y mezcla con bajos 808 calibrados.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Cultura Urbana">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Cultura y Estilo</h5>
+              <p>Moda urbana, lanzamientos y tendencias que marcan la pauta.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrapZone" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTrapZone" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Pilares del Género -->
+    <section class="seccion-contenido">
+      <h2 class="subtitulo-seccion">Pilares del Género</h2>
+      <div class="contenedor-tarjetas-flex">
+        <article class="tarjeta" tabindex="0">
+          <span class="etiqueta-destaque">Chile / Global</span>
+          <h3 class="titulo-tarjeta">Cris Mj</h3>
+          <p class="texto-cuerpo">Pionero del sonido chileno internacional, rompiendo récords mundiales con flows pegadizos y presencia escénica.</p>
+        </article>
+        <article class="tarjeta" tabindex="0">
+          <span class="etiqueta-destaque">Underground</span>
+          <h3 class="titulo-tarjeta">Juicy Nise</h3>
+          <p class="texto-cuerpo">Líneas afiladas, métricas crudas y una estética sonora cargada de bajos 808 distorsionados que marcan identidad.</p>
+        </article>
+        <article class="tarjeta" tabindex="0">
+          <span class="etiqueta-destaque">Rosario Trap</span>
+          <h3 class="titulo-tarjeta">Fanta Rosario</h3>
+          <p class="texto-cuerpo">Frescura, barras callejeras sin filtro y el pulso directo del barrio aportando contundencia a cada lanzamiento.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <p class="texto-copyright">&copy; 2026 TrapZone Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+/* ===================================================
+   1. RESETEO GLOBAL DEL BOX MODEL
+   =================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================================
+   VARIABLES DE DISEÑO
+   =================================================== */
+:root {
+  --color-fondo: #0a0a0c;
+  --color-superficie: #16161a;
+  --color-borde: #26262e;
+
+  --color-primario: #00f0ff;
+  --color-secundario: #ff007f;
+  --color-destaque: #ffe600;
+
+  --color-texto-principal: #f4f4f6;
+  --color-texto-secundario: #9e9ea7;
+
+  --fuente-titulos: 'Montserrat', sans-serif;
+  --fuente-cuerpo: 'Open Sans', sans-serif;
+}
+
+/* ===================================================
+   ESTRUCTURA GENERAL
+   =================================================== */
+body {
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================================
+   SOBREESCRITURA Y PERSONALIZACIÓN DE BOOTSTRAP NAVBAR
+   =================================================== */
+.navbar-trapzone {
+  background-color: var(--color-superficie) !important;
+  border-bottom: 1px solid var(--color-borde);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-trapzone .logotipo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primario) !important;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-trapzone .logotipo:hover,
+.navbar-trapzone .logotipo:focus {
+  opacity: 0.8;
+}
+
+.navbar-trapzone .nav-link {
+  color: var(--color-texto-secundario) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-trapzone .nav-link:hover,
+.navbar-trapzone .nav-link.active {
+  color: var(--color-primario) !important;
+}
+
+.navbar-trapzone .nav-link:focus {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 4px;
+}
+
+.navbar-trapzone .nav-link:active {
+  transform: scale(0.95);
+}
+
+.navbar-toggler {
+  border-color: var(--color-borde) !important;
+  background-color: var(--color-fondo);
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 240, 255, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 240, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ===================================================
+   CONTENEDOR PRINCIPAL Y SECCIONES
+   =================================================== */
+.contenedor-principal {
+  flex: 1;
+  width: 92%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+.seccion-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  gap: 1rem;     
+}
+
+.seccion-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===================================================
+   CONTENEDOR DE TARJETAS Y GRID
+   =================================================== */
+.contenedor-tarjetas-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;            
+}
+
+.tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 1.5rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;     
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primario);
+  box-shadow: 0 8px 20px rgba(0, 240, 255, 0.1);
+}
+
+.tarjeta:focus {
+  outline: 2px solid var(--color-primario);
+}
+
+.tarjeta:active {
+  transform: translateY(-1px);
+}
+
+/* ===================================================
+   PERSONALIZACIÓN DEL CAROUSEL DE BOOTSTRAP
+   =================================================== */
+.carousel-trapzone {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+}
+
+.carousel-item img {
+  height: 380px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.carousel-caption {
+  background: rgba(10, 10, 12, 0.85);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-superficie);
+  border-radius: 50%;
+  padding: 1.2rem;
+  border: 1px solid var(--color-borde);
+}
+
+/* ===================================================
+   TIPOGRAFIA Y COMPONENTES
+   =================================================== */
+.titulo-principal {
+  font-family: var(--fuente-titulos);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-texto-principal);
+}
+
+.subtitulo-seccion {
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.titulo-tarjeta {
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+
+.texto-destacado {
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+}
+
+.texto-cuerpo {
+  font-size: 0.95rem;
+  color: var(--color-texto-secundario);
+}
+
+.etiqueta-destaque {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 230, 0, 0.12);
+  color: var(--color-destaque);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.boton-primario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primario);
+  color: #050508;
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.boton-primario:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.boton-primario:focus {
+  outline: 2px solid var(--color-secundario);
+  outline-offset: 3px;
+}
+
+.boton-primario:active {
+  transform: scale(0.97);
+}
+
+/* ===================================================
+   FORMULARIO: Página Contacto
+   =================================================== */
+.formulario-contacto {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 1.5rem; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.etiqueta-campo {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-texto-principal);
+}
+
+.campo-texto,
+.area-texto {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: var(--color-texto-principal);
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-texto:hover,
+.area-texto:hover {
+  border-color: var(--color-texto-secundario);
+}
+
+.campo-texto:focus,
+.area-texto:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.2);
+}
+
+.boton-envio {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ===================================================
+   FOOTER
+   =================================================== */
+.pie-pagina {
+  background-color: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.texto-copyright {
+  color: var(--color-texto-secundario);
+  font-size: 0.85rem;
+}
+
+/* ===================================================
+   BREAKPOINT DESKTOP: min-width: 1024px
+   =================================================== */
+@media (min-width: 1024px) {
+  .contenedor-principal {
+    width: 90%;
+    margin: 3rem auto;
+    gap: 3.5rem;
+  }
+
+  .seccion-hero {
+    padding: 2.5rem;
+  }
+
+  .contenedor-tarjetas-flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .titulo-principal {
+    font-size: 2.3rem;
+  }
+
+  .subtitulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .texto-destacado {
+    font-size: 1.15rem;
+  }
+
+  .boton-primario {
+    width: auto;
+  }
+
+  .formulario-contacto {
+    padding: 2rem;
+    max-width: 600px;
+  }
+
+  .boton-envio {
+    width: auto;
+    align-self: flex-start;
+  }
+}
